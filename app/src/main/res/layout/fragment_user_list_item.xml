@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:paddingTop="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+    <ImageView
+            android:id="@+id/userImageView"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/userimagebg"
+            android:layout_centerVertical="true"/>
+
+    <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/not_available_circle"
+            android:layout_alignTop="@id/userImageView"
+            android:layout_alignRight="@id/userImageView"
+            android:layout_alignEnd="@id/userImageView"/>
+
+    <ImageView
+            android:id="@+id/availableImageView"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/available_circle"
+            android:layout_alignTop="@id/userImageView"
+            android:layout_alignRight="@id/userImageView"
+            android:layout_alignEnd="@id/userImageView"/>
+
+    <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center|start"
+            android:textSize="16sp"
+            android:text="Nome Cognome"
+            android:layout_marginLeft="24dp"
+            android:textColor="@color/slate"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:layout_toEndOf="@id/userImageView"
+            android:layout_toRightOf="@id/userImageView"/>
+
+    <TextView
+            android:id="@+id/levelTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|start"
+            android:layout_marginLeft="24dp"
+            android:textColor="@color/lightGreyBlue"
+            android:text="Livello: 2"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:layout_below="@+id/nameTextView"
+            android:layout_toRightOf="@id/userImageView"
+            android:layout_toEndOf="@id/userImageView"
+            android:layout_marginStart="24dp"/>
+
+    <Button
+            android:id="@+id/challengeButton"
+            android:layout_width="99dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="24dp"
+            android:background="@drawable/buttonbg"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/userImageView"
+            android:layout_toEndOf="@id/userImageView"
+            android:layout_below="@+id/levelTextView"
+            android:text="SFIDA"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif"
+            android:textColor="#ffffff"
+            android:layout_marginStart="24dp"/>
+
+    <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/disclosure"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:tint="@color/lightGreyBlue"/>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/verylightPink"
+            android:layout_alignParentBottom="true"/>
+</RelativeLayout>

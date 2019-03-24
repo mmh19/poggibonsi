@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+        android:background="#000000">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/campo"
+            android:scaleType="centerCrop"/>
+    <RelativeLayout
+            android:layout_width="112dp"
+            android:background="@drawable/buttonmonoblue"
+            android:layout_height="38dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="26dp">
+
+        <ImageView
+                android:id="@+id/image"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
+                android:background="@drawable/bluecircle"/>
+
+        <TextView
+                android:id="@+id/bluescore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_toEndOf="@id/image"
+                android:layout_toRightOf="@id/image"
+                android:textColor="@color/slate"
+                android:text="0"
+                android:textSize="20sp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:layout_width="112dp"
+            android:background="@drawable/buttonmonored"
+            android:layout_height="38dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="26dp">
+
+        <ImageView
+                android:id="@+id/image1"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/redcircle"
+                android:layout_alignParentRight="true"/>
+
+        <TextView
+                android:id="@+id/redscore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_toStartOf="@id/image1"
+                android:layout_toLeftOf="@id/image1"
+                android:textColor="@color/slate"
+                android:text="0"
+                android:textSize="20sp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"/>
+    </RelativeLayout>
+    
+    <SurfaceView
+            android:id="@+id/videoSurface"
+            android:layout_width="1280px"
+            android:layout_height="720px"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:keepScreenOn="true"/>
+
+</RelativeLayout>

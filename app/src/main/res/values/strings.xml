@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Poggibonsi</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signupProfileImageHint">Clicca qui sopra per selezionare l\'immagine del profilo</string>
+    <string name="nameHint">Nome</string>
+    <string name="surnameHint">Cognome</string>
+    <string name="next">Continua</string>
+    <string name="thersAProblem">C\'è stato un problema</string>
+    <string name="signupErrorMessage">C\'è stato un problema durante la registrazione. Riprova.</string>
+    <string name="ok">Ok</string>
+    <string name="emailHint">Email</string>
+    <string name="sfida">Sfida</string>
 </resources>

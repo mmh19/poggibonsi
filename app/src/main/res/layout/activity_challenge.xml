@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:background="@drawable/ngradientrblue">
+
+    <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fill"/>
+    
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="169dp"
+            android:layout_height="169dp"
+            android:src="@drawable/bluecircle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            app:civ_border_color="@color/colorPrimaryDark"
+            app:civ_border_width="3dp"
+            android:layout_marginBottom="64dp"/>
+
+    <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Nuova sfida"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:textStyle="bold"
+            android:layout_below="@id/imageView"/>
+
+    <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Nuova sfida"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
+            android:layout_below="@id/title"/>
+    
+    <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="64dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+        <Button
+                android:id="@+id/reject"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonmonoborder"
+                android:textColor="#ffffff"
+                android:text="Rifiuta"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:layout_margin="8dp"/>
+        <Button
+                android:id="@+id/accept"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_weight="1"
+                android:background="@drawable/buttonmono"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Accetta"
+                android:textSize="17sp"
+                android:fontFamily="sans-serif"
+                android:textStyle="bold"
+                android:layout_margin="8dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
