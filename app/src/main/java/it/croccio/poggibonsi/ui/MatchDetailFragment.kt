@@ -54,6 +54,22 @@ class MatchDetailFragment : Fragment(), WSCallback {
             activity?.startActivity(LiveStreamingActivity::class.java)
         }
 
+        stopButton.setOnClickListener {
+            waitingMatch?.status = "FINISHED"
+            RestClient.service.modifyMatch(waitingMatch!!, waitingMatch!!._id!!).enqueue(object :
+                Callback<Match> {
+                override fun onFailure(call: Call<Match>, t: Throwable) {
+                    Log.e("#####", "")
+                }
+
+                override fun onResponse(call: Call<Match>, response: retrofit2.Response<Match>) {
+                    Log.e("#####", "")
+                }
+
+            })
+            activity?.finish()
+        }
+
         RestClient.service.currentMatch().enqueue(object : Callback<Match> {
             override fun onFailure(call: Call<Match>, t: Throwable) {
                 Log.e("#####", "")

@@ -26,6 +26,8 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.schedulers.Schedulers
 import it.croccio.poggibonsi.controller.MatchCallback
 import it.croccio.poggibonsi.controller.MatchController
+import it.croccio.poggibonsi.controller.WSCallback
+import it.croccio.poggibonsi.controller.WSController
 import it.croccio.poggibonsi.core.restclient.RestClient
 import it.croccio.poggibonsi.extension.IntActivity
 import it.croccio.poggibonsi.model.Match
@@ -40,7 +42,14 @@ import retrofit2.Response
 var waitingMatch: Match? = null
 var waitingToAcceptChallenge = false
 
-class MainActivity : AppCompatActivity(), IntActivity, MatchCallback {
+
+//fixme: tutta l'app, è un casino, ma in una nottata cosa si vuole di più dalla vita? :)
+class MainActivity : AppCompatActivity(), IntActivity, MatchCallback, WSCallback {
+    override fun match(match: Match) {
+        if ((match.blueScore == 5 && match.redScore == 0) || (match.blueScore == 0 && match.redScore == 5)) {
+            startActivity(LiveStreamingActivity::class.java)
+        }
+    }
 
     var snackbarMatch: Snackbar? = null
 
@@ -87,6 +96,8 @@ class MainActivity : AppCompatActivity(), IntActivity, MatchCallback {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        WSController.callback.add(this)
 
         replaceFragment(
             SplashScreenFragment(),
